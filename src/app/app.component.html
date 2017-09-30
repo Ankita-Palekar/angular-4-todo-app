@@ -1,5 +1,5 @@
 <section class="todoapp">
-  <app-todo-list-header (add)="onAddTodo($event)" )></app-todo-list-header>
+  <app-todo-list-header (add)="onAddTodo($event)"></app-todo-list-header>
   <section class="main" *ngIf="todos.length > 0">
     <ul class="todo-list">
       <li *ngFor="let todo of todos" [class.completed]="todo.complete">
