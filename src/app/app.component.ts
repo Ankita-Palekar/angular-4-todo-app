@@ -15,10 +15,7 @@ export class AppComponent {
   constructor(private todoDataService: TodoDataService) {
   }
 
-  addTodo() {
-    this.todoDataService.addTodo(this.newTodo);
-    this.newTodo = new Todo();
-  }
+
 
   toggleTodoComplete(todo) {
     this.todoDataService.toggleTodoComplete(todo);
