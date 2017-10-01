@@ -32,4 +32,12 @@ export class AppComponent {
     return this.todoDataService.getAllTodos();
   }
 
+
+  onToggleTodoComplete(todo: Todo) {
+    this.todoDataService.toggleTodoComplete(todo);
+  }
+
+  onRemoveTodo(todo: Todo) {
+    this.todoDataService.deleteTodoById(todo.id);
+  }
 }
