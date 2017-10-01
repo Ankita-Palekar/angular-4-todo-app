@@ -1,13 +1,8 @@
-<section class="todoapp">
-  <app-todo-list-header
-    (add)="onAddTodo($event)"
-  ></app-todo-list-header>
-  <app-todo-list
-    [todos]="todos"
-    (toggleComplete)="onToggleTodoComplete($event)"
-    (remove)="onRemoveTodo($event)"
-  ></app-todo-list>
-  <app-todo-list-footer
-    [todos]="todos"
-  ></app-todo-list-footer>
-</section>
+<app-root>
+
+  <!-- Angular router finds router outlet -->
+  <router-outlet></router-outlet>
+
+  <!-- and places the component right next to it, NOT inside it -->
+  <app-todos></app-todos>
+</app-root>
