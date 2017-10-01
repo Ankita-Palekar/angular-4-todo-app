@@ -24,11 +24,11 @@ export class TodoListComponent implements OnInit {
   ngOnInit() {
   }
 
-  onToggleComplete(todo: Todo) {
+  onToggleTodoComplete(todo: Todo) {
     this.toggleComplete.emit(todo);
   }
 
-  inRemoveTodo(todo: Todo) {
+  onRemoveTodo(todo: Todo) {
     this.remove.emit(todo);
   }
 }
