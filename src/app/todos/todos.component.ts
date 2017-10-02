@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {TodoDataService} from '../todo-data.service';
 import {Todo} from '../todo';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 
 
 @Component({
@@ -12,12 +12,12 @@ import { ActivatedRoute } from '@angular/router';
 export class TodosComponent implements OnInit {
   todos: Todo[] = [];
 
-  constructor(    private todoDataService: TodoDataService,
-                  private route: ActivatedRoute) {
+  constructor(private todoDataService: TodoDataService,
+              private route: ActivatedRoute) {
   }
 
   public ngOnInit() {
-    this.todoDataService.getAllTodos().subscribe((todos) => {
+    this.route.data.map((data) => data['todos']).subscribe((todos) => {
       this.todos = todos;
     });
   }

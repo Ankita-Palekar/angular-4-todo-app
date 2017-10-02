@@ -1,24 +1,9 @@
 {
   "todos": [
     {
-      "title": "Finsihing angular js",
-      "complete": true,
+      "title": "1",
+      "complete": false,
       "id": 1
-    },
-    {
-      "title": "Finsihing Type script reading ",
-      "complete": false,
-      "id": 2
-    },
-    {
-      "title": "Finsihing angular documenation reading",
-      "complete": false,
-      "id": 3
-    },
-    {
-      "title": "Finsihing visiting card design ",
-      "complete": false,
-      "id": 4
     }
   ]
 }

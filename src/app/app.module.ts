@@ -12,6 +12,8 @@ import {TodoDataService} from './todo-data.service';
 import { ApiService } from './api.service';
 import {AppRoutingModule} from './app-routing.module';
 import { TodosComponent } from './todos/todos.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {TodosResolver} from '../todos.resolver';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { TodosComponent } from './todos/todos.component';
     TodoListComponent,
     TodoListItemComponent,
     TodoListFooterComponent,
-    TodosComponent
+    TodosComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { TodosComponent } from './todos/todos.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [TodoDataService, ApiService],
+  providers: [TodoDataService, ApiService, TodosResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule {

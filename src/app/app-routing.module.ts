@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {TodosComponent} from './todos/todos.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {TodosResolver} from '../todos.resolver';
 
 const routes: Routes = [
   {
@@ -11,7 +13,14 @@ const routes: Routes = [
   },
   {
     path: 'todos',
-    component: TodosComponent
+    component: TodosComponent,
+    resolve: {
+      todos: TodosResolver
+    }
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 
@@ -20,6 +29,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   declarations: [],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [TodosResolver]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

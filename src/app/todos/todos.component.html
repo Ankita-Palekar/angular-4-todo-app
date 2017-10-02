@@ -3,3 +3,6 @@
   <app-todo-list [todos]="todos" (toggleComplete)="onToggleTodoComplete($event)" (remove)="onRemoveTodo($event)"></app-todo-list>
   <app-todo-list-footer [todos]="todos"></app-todo-list-footer>
 </section>
+<div *ngIf="!todos.length">
+  You currently do not have any todo's yet.
+</div>
